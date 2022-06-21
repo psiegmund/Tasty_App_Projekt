@@ -1,26 +1,27 @@
-import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import DetailList from './components/DetailList';
-import MealList from './components/MealList';
-import Main from './pages/Main';
-import './App.scss';
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import DetailList from "./components/DetailList";
+import MealList from "./components/MealList";
+import Main from "./pages/Main";
+import "./App.scss";
+import { AuthContextProvider } from "./context/AuthContext";
+import Search from "./components/Search";
 
 function App() {
-
-
-
-
   return (
-    <div className="App">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/category/:name" element={<MealList />} />
-        <Route path="/detail/:id" element={<DetailList />} />
-      </Routes>
-      <Footer />
-    </div>
+    <AuthContextProvider>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/category/:name" element={<MealList />} />
+          <Route path="/detail/:id" element={<DetailList />} />
+          <Route path="/search/:input" element={<Search />} />
+        </Routes>
+        <Footer />
+      </div>
+    </AuthContextProvider>
   );
 }
 
