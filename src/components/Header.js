@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 // import AuthContext from "../context/AuthContext";
 
 const Header = () => {
+
   // const { data, setData, searchData } = useContext(AuthContext);
   const [input, setInput] = useState("");
   const [data, setData] = useState([]);

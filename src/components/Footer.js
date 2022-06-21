@@ -7,5 +7,4 @@ const Footer = () => {
     </section>
   );
 };
-
 export default Footer;
