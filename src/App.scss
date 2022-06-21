@@ -4,10 +4,41 @@
     box-sizing: border-box;
 }
 
-h1 {
-    font-size: 16px;
+.headerContainer {
+    text-align: center;
+    margin: 50px;
+    height: 20vh;
+    width: 100%;
+
+    input[type="text"] {
+        padding: 5px;
+        background-color: #ffab61e8;
+    }
+
+    input[type="button"] {
+        padding: 5px;
+        border-radius: 5px;
+        background-color: #FF6E85;
+    }
 }
 
-h2 {
-    color: green;
+.categoryListContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 35px;
+}
+
+.detailListContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 35px;
+}
+
+.footerContainer {
+    height: 20vh;
+    width: 100%;
 }
