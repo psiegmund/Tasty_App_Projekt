@@ -32,7 +32,7 @@ const DetailList = () => {
                     <h1>Ingredients</h1>
                     <p></p>
                     <a href={detail.strYoutube}>
-                        <button>Youtube</button>
+                        <button>Watch on YouTube</button>
                     </a>
                 </div>
             </div>

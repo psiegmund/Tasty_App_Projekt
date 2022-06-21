@@ -38,7 +38,7 @@ const Header = () => {
         <img src={logo} alt={logo} />
       </Link>
 
-      <p>Find a recipe,an idea,an inspiration...</p>
+      <h1>Find a recipe,an idea,an inspiration...</h1>
       <form onSubmit={handleChange} action="">
         <input
           type="text"

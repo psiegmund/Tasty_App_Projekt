@@ -8,7 +8,7 @@ const CategoryItem = ({ img, id, name }) => {
 
         <Link to={`/category/${name}`} >
             <section className="categoryItemContainer">
-                <p>{name}</p>
+                <h1>{name}</h1>
                 <img src={img} alt={img} />
             </section>
         </Link>
