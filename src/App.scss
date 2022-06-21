@@ -12,13 +12,17 @@
 
     input[type="text"] {
         padding: 5px;
+        border-radius: 5px;
         background-color: #ffab61e8;
+        border-color: transparent;
     }
 
-    input[type="button"] {
+    button {
         padding: 5px;
         border-radius: 5px;
+        color: white;
         background-color: #FF6E85;
+        border-color: transparent;
     }
 }
 
