@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import ModalVideo from "react-modal-video";
+// import ModalVideo from "react-modal-video";
 
 const DetailList = () => {
   const [detail, setDetail] = useState([]);
-  const [youtube, setYoutube] = useState(false);
+  // const [youtube, setYoutube] = useState(false);
   const { id } = useParams();
   console.log(id);
 
@@ -173,24 +173,24 @@ const DetailList = () => {
             </tr>
           </table> */}
 
-            <button
+            {/* <button
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 100 }}
               onClick={() => setYoutube(true)}
             >
               Watch on YouTube
-            </button>
+            </button> */}
             {/* </div> */}
           </div>
         </div>
       </div>
-      <ModalVideo
+      {/* <ModalVideo
         channel="youtube"
         autoplay
         isOpen={youtube}
         videoId={detail.strYoutube ? detail.strYoutube.slice(32) : null}
         onClose={() => setYoutube(false)}
-      />
+      /> */}
     </section>
   );
 };
