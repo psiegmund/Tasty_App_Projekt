@@ -19,7 +19,7 @@ const MealList = () => {
     return (
         <section className="mealListContainer">
             <h1 style={{ color: "#FFAC61" }}>Everything {name}</h1>
-            <h1></h1>
+            <h1> </h1>
             {meals.map((el, i) =>
                 <MealItem
                     key={i}
