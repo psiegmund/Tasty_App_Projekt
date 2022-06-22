@@ -8,13 +8,17 @@ import RandomItem from "./components/RandomItem";
 import "./App.scss";
 import { AuthContextProvider } from "./context/AuthContext";
 import Search from "./components/Search";
-import LightDark from "./components/LightDark";
+import { useState } from 'react';
+
 
 function App() {
+
+  const [white, setWhite] = useState(true);
+
   return (
     <AuthContextProvider>
-      <div className="App">
-        <LightDark />
+      <div className="App" style={{ color: white ? 'black' : 'white', backgroundColor: white ? 'white' : 'black' }}>
+        <button onClick={() => setWhite(!white)}>Change to {white ? 'Blackmode' : 'Whitemode'}</button>
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
@@ -25,7 +29,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </AuthContextProvider>
+    </AuthContextProvider >
   );
 }
 
