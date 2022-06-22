@@ -23,6 +23,7 @@ const MealList = () => {
             {meals.map((el, i) =>
                 <MealItem
                     key={i}
+                    i={i}
                     id={el.idMeal}
                     name={el.strMeal}
                     img={el.strMealThumb}
