@@ -3,18 +3,18 @@ import React, { useState, useEffect } from "react";
 import MealItem from "./MealItem";
 
 const MealList = () => {
-  const [meals, setMeals] = useState([]);
+    const [meals, setMeals] = useState([]);
 
-  const { name } = useParams();
-  console.log(name);
+    const { name } = useParams();
+    console.log(name);
 
-  useEffect(() => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${name}`)
-      .then((res) => res.json())
-      .then((json) => setMeals(json.meals));
-  }, [name]);
+    useEffect(() => {
+        fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${name}`)
+            .then((res) => res.json())
+            .then((json) => setMeals(json.meals));
+    }, [name]);
 
-  console.log(meals);
+    console.log(meals);
 
     return (
         <section className="mealListContainer">
@@ -23,6 +23,7 @@ const MealList = () => {
             {meals.map((el, i) =>
                 <MealItem
                     key={i}
+                    i={i}
                     id={el.idMeal}
                     name={el.strMeal}
                     img={el.strMealThumb}

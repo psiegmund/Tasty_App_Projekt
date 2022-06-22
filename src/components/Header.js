@@ -19,7 +19,7 @@ const Header = () => {
 
       <h1>Find a recipe,an idea,an inspiration...</h1>
       <form onSubmit={handleChange} action="">
-        <input
+        <input style={{ outlineColor: "#FF6E85" }}
           type="search"
           placeholder="Type something to search"
           value={input}
