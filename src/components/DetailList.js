@@ -29,30 +29,30 @@ const DetailList = () => {
     return <ul>{instlist}</ul>;
   };
 
+  // const ingredientsList = () => {
+  //   for (let i = 1; i < 21; i++) {
+  //     // let requestIngredient = "strIngredient" + i;
+  //     // let requestMeasure = "strMeasure" + i;
+  //     // let detArr = [];
+  //     // detArr += detail[requestIngredient];
+  //     // detArr += detail[requestMeasure];
 
-  const ingredientsList = () => {
-    for (let i = 1; i < 21; i++) {
-      // let requestIngredient = "strIngredient" + i;
-      // let requestMeasure = "strMeasure" + i;
-      // let detArr = [];
-      // detArr += detail[requestIngredient];
-      // detArr += detail[requestMeasure];
 
-      // console.log(detArr);
-      // console.log(detail[requestIngredient]);
+  //     // console.log(detArr);
+  //     // console.log(detail[requestIngredient]);
 
-      // let ingredient = detail[requestIngredient];
+  //     // let ingredient = detail[requestIngredient];
 
-      // let test = ingredient.map((elt) =>
-      //   console.log(elt))
+  //     // let test = ingredient.map((elt) =>
+  //     //   console.log(elt))
 
-      // console.log(ingredient);
+  //     // console.log(ingredient);
 
-      // console.log(detail[requestMeasure]);
-      // return <tr><td>{detail[requestIngredient]}</td><td>{detail[requestMeasure]}</td></tr>
-    }
+  //     // console.log(detail[requestMeasure]);
+  //     // return <tr><td>{detail[requestIngredient]}</td><td>{detail[requestMeasure]}</td></tr>
+  //   }
 
-  }
+  // }
 
   return (
     <section className="detailListContainer">
@@ -122,9 +122,9 @@ const DetailList = () => {
         <div>
           <h1>Ingredients</h1>
 
-          <table id="ingredientsTable">
-            {ingredientsList()}
-            {/* <tr>
+          {/* <table id="ingredientsTable">
+            {ingredientsList()} */}
+          {/* <tr>
               <td>{detail.strIngredient1}</td>
               <td>{detail.strIngredient2}</td>
               <td>{detail.strIngredient3}</td>
@@ -146,7 +146,7 @@ const DetailList = () => {
               <td>{detail.strIngredient19}</td>
               <td>{detail.strIngredient20}</td>
             </tr> */}
-          </table>
+          {/* </table> */}
           <table>
             <tr>
               <td>{detail.strMeasure1}</td>
