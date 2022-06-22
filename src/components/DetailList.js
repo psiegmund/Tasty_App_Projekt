@@ -17,29 +17,27 @@ const DetailList = () => {
   console.log(detail);
 
   const instructionsList = () => {
-    const instArray = detail.strInstructions.split(".");
+    const instArr = detail.strInstructions.split(".");
+    instArr.pop();
+    console.log(instArr);
 
-    console.log(instArray);
-
-    instArray.pop();
-
-    console.log(instArray);
-
-    const listItems = instArray.map((item, i) => (
+    const instlist = instArr.map((elt, i) => (
       <li key={i} className="instructionsList">
-        {item}.
+        {elt}.
       </li>
     ));
-    return <ul>{listItems}</ul>;
+    return <ul>{instlist}</ul>;
   };
 
-  // const ingredients = () => {
-  //   for (let i = 1; i < 20; i++) {
-  //     console.log(
-  //       `${(detail.strIngredient += i)}, ${(detail.strMeasure += i)}`
-  //     );
-  //   }
-  // };
+  const ingredients = () => {
+    for (let i = 1; i < 20; i++) {
+      console.log(
+        `${(detail.strIngredient += i)}, ${(detail.strMeasure += i)}`
+      );
+    }
+  };
+
+  ingredients();
 
   return (
     <section className="detailListContainer">
@@ -96,7 +94,6 @@ const DetailList = () => {
             <li>{detail.strMeasure19}</li>
             <li>{detail.strMeasure20}</li>
           </ul>
-
           <button
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 100 }}

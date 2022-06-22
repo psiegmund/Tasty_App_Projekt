@@ -22,11 +22,11 @@ const Header = () => {
         <input
           type="search"
           placeholder="Type something to search"
-          // value={input}
+          value={input}
           onChange={(e) => setInput(e.target.value)}
         />
 
-        <Link to={`/search/${input}`}>
+        <Link to={input ? `/search/${input}` : "/search/undefined"}>
           <button type="submit">Search</button>
         </Link>
       </form>
