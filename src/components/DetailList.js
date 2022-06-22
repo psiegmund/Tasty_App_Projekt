@@ -51,72 +51,73 @@ const DetailList = () => {
 
   return (
     <section className="detailListContainer">
-      <img src={detail.strMealThumb} alt="Alt" />
+      <div>
+        <img src={detail.strMealThumb} alt="Alt" />
+        <div className="descriptionContainer">
+          <div>
+            <h1>{detail.strMeal}</h1>
+            {detail.strInstructions ? instructionsList() : null}
+          </div>
+          <div>
+            <h1>Ingredients</h1>
+            {/* <h2>{ingredientsList()}</h2> */}
+            <table>
+              <tr>
+                <td>{detail.strIngredient1}</td>
+                <td>{detail.strIngredient2}</td>
+                <td>{detail.strIngredient3}</td>
+                <td>{detail.strIngredient4}</td>
+                <td>{detail.strIngredient5}</td>
+                <td>{detail.strIngredient6}</td>
+                <td>{detail.strIngredient7}</td>
+                <td>{detail.strIngredient8}</td>
+                <td>{detail.strIngredient9}</td>
+                <td>{detail.strIngredient10}</td>
+                <td>{detail.strIngredient11}</td>
+                <td>{detail.strIngredient12}</td>
+                <td>{detail.strIngredient13}</td>
+                <td>{detail.strIngredient14}</td>
+                <td>{detail.strIngredient15}</td>
+                <td>{detail.strIngredient16}</td>
+                <td>{detail.strIngredient17}</td>
+                <td>{detail.strIngredient18}</td>
+                <td>{detail.strIngredient19}</td>
+                <td>{detail.strIngredient20}</td>
+              </tr>
+            </table>
+            <table>
+              <tr>
+                <td>{detail.strMeasure1}</td>
+                <td>{detail.strMeasure2}</td>
+                <td>{detail.strMeasure3}</td>
+                <td>{detail.strMeasure4}</td>
+                <td>{detail.strMeasure5}</td>
+                <td>{detail.strMeasure6}</td>
+                <td>{detail.strMeasure7}</td>
+                <td>{detail.strMeasure8}</td>
+                <td>{detail.strMeasure9}</td>
+                <td>{detail.strMeasure10}</td>
+                <td>{detail.strMeasure11}</td>
+                <td>{detail.strMeasure12}</td>
+                <td>{detail.strMeasure13}</td>
+                <td>{detail.strMeasure14}</td>
+                <td>{detail.strMeasure15}</td>
+                <td>{detail.strMeasure16}</td>
+                <td>{detail.strMeasure17}</td>
+                <td>{detail.strMeasure18}</td>
+                <td>{detail.strMeasure19}</td>
+                <td>{detail.strMeasure20}</td>
+              </tr>
+            </table>
 
-      <div className="descriptionContainer">
-        <div>
-          <h1>{detail.strMeal}</h1>
-          {detail.strInstructions ? instructionsList() : null}
-        </div>
-        <div>
-          <h1>Ingredients</h1>
-          {/* <h2>{ingredientsList()}</h2> */}
-          <table>
-            <tr>
-              <td>{detail.strIngredient1}</td>
-              <td>{detail.strIngredient2}</td>
-              <td>{detail.strIngredient3}</td>
-              <td>{detail.strIngredient4}</td>
-              <td>{detail.strIngredient5}</td>
-              <td>{detail.strIngredient6}</td>
-              <td>{detail.strIngredient7}</td>
-              <td>{detail.strIngredient8}</td>
-              <td>{detail.strIngredient9}</td>
-              <td>{detail.strIngredient10}</td>
-              <td>{detail.strIngredient11}</td>
-              <td>{detail.strIngredient12}</td>
-              <td>{detail.strIngredient13}</td>
-              <td>{detail.strIngredient14}</td>
-              <td>{detail.strIngredient15}</td>
-              <td>{detail.strIngredient16}</td>
-              <td>{detail.strIngredient17}</td>
-              <td>{detail.strIngredient18}</td>
-              <td>{detail.strIngredient19}</td>
-              <td>{detail.strIngredient20}</td>
-            </tr>
-          </table>
-          <table>
-            <tr>
-              <td>{detail.strMeasure1}</td>
-              <td>{detail.strMeasure2}</td>
-              <td>{detail.strMeasure3}</td>
-              <td>{detail.strMeasure4}</td>
-              <td>{detail.strMeasure5}</td>
-              <td>{detail.strMeasure6}</td>
-              <td>{detail.strMeasure7}</td>
-              <td>{detail.strMeasure8}</td>
-              <td>{detail.strMeasure9}</td>
-              <td>{detail.strMeasure10}</td>
-              <td>{detail.strMeasure11}</td>
-              <td>{detail.strMeasure12}</td>
-              <td>{detail.strMeasure13}</td>
-              <td>{detail.strMeasure14}</td>
-              <td>{detail.strMeasure15}</td>
-              <td>{detail.strMeasure16}</td>
-              <td>{detail.strMeasure17}</td>
-              <td>{detail.strMeasure18}</td>
-              <td>{detail.strMeasure19}</td>
-              <td>{detail.strMeasure20}</td>
-            </tr>
-          </table>
-
-          <button
-            whileHover={{ scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 100 }}
-            onClick={() => setYoutube(true)}
-          >
-            Watch on YouTube
-          </button>
+            <button
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 100 }}
+              onClick={() => setYoutube(true)}
+            >
+              Watch on YouTube
+            </button>
+          </div>
         </div>
       </div>
 
