@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 const DetailList = () => {
   const [detail, setDetail] = useState([]);
   const [youtube, setYoutube] = useState(false);
-
   const { id } = useParams();
   console.log(id);
 

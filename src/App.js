@@ -8,11 +8,13 @@ import RandomItem from "./components/RandomItem";
 import "./App.scss";
 import { AuthContextProvider } from "./context/AuthContext";
 import Search from "./components/Search";
+import LightDark from "./components/LightDark";
 
 function App() {
   return (
     <AuthContextProvider>
       <div className="App">
+        <LightDark />
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />

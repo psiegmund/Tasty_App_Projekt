@@ -16,20 +16,20 @@ const MealList = () => {
 
   console.log(meals);
 
-  return (
-    <section className="detailListContainer">
-      This is MealList
-      {meals.map((el, i) => (
-        <MealItem
-          i={i}
-          key={i}
-          id={el.idMeal}
-          name={el.strMeal}
-          img={el.strMealThumb}
-        />
-      ))}
-    </section>
-  );
-};
+    return (
+        <section className="mealListContainer">
+            <h1 style={{ color: "#FFAC61" }}>Everything {name}</h1>
+            <h1></h1>
+            {meals.map((el, i) =>
+                <MealItem
+                    key={i}
+                    id={el.idMeal}
+                    name={el.strMeal}
+                    img={el.strMealThumb}
+                />
+            )}
+        </section>
+    );
+}
 
 export default MealList;
