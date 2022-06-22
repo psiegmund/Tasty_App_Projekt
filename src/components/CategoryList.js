@@ -35,6 +35,7 @@ const CategoryList = () => {
       <div className="categoryList">
         {data.map((el, i) => (
           <CategoryItem
+            i={i}
             key={i}
             id={el.idCategory}
             name={el.strCategory}
@@ -43,7 +44,10 @@ const CategoryList = () => {
         ))}
 
         <Link to={`/detail/${randomId}`}>
-          <div className="randomContainer">
+          <div
+            style={{ backgroundColor: "#ffab61e8" }}
+            className="randomContainer"
+          >
             <h3>Random</h3>
           </div>
         </Link>
