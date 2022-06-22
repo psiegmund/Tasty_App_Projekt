@@ -18,21 +18,18 @@ const DetailList = () => {
   console.log(detail);
 
   const instructionsList = () => {
-    const instArray = detail.strInstructions.split(".");
+    const instArr = detail.strInstructions.split(".");
+    instArr.pop();
+    console.log(instArr);
 
-    console.log(instArray);
-
-    instArray.pop();
-
-    console.log(instArray);
-
-    const listItems = instArray.map((item, i) => (
+    const instlist = instArr.map((elt, i) => (
       <li key={i} className="instructionsList">
-        {item}.
+        {elt}.
       </li>
     ));
-    return <ul>{listItems}</ul>;
+    return <ul>{instlist}</ul>;
   };
+
 
   const ingredientsList = () => {
     for (let i = 1; i < 21; i++) {
