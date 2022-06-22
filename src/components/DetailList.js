@@ -45,10 +45,10 @@ const DetailList = () => {
       // console.log(detArr);
       // console.log(detail[requestIngredient]);
 
-      let ingredient = detail[requestIngredient];
+      // let ingredient = detail[requestIngredient];
 
-      let test = ingredient.map((elt) =>
-        console.log(elt))
+      // let test = ingredient.map((elt) =>
+      //   console.log(elt))
 
       // console.log(ingredient);
 
