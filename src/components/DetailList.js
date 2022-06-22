@@ -114,17 +114,18 @@ const DetailList = () => {
                 <td>{detail.strMeasure20}</td>
               </tr>
             </table>
-      <div className="descriptionContainer">
-        <div>
-          <h1>{detail.strMeal}</h1>
-          {detail.strInstructions ? instructionsList() : null}
-        </div>
-        <div>
-          <h1>Ingredients</h1>
+          </div>
+          <div className="descriptionContainer">
+            <div>
+              <h1>{detail.strMeal}</h1>
+              {detail.strInstructions ? instructionsList() : null}
+            </div>
+            {/* <div>
+              <h1>Ingredients</h1> */}
 
-          {/* <table id="ingredientsTable">
+            {/* <table id="ingredientsTable">
             {ingredientsList()} */}
-          {/* <tr>
+            {/* <tr>
               <td>{detail.strIngredient1}</td>
               <td>{detail.strIngredient2}</td>
               <td>{detail.strIngredient3}</td>
@@ -146,8 +147,8 @@ const DetailList = () => {
               <td>{detail.strIngredient19}</td>
               <td>{detail.strIngredient20}</td>
             </tr> */}
-          {/* </table> */}
-          <table>
+            {/* </table> */}
+            {/* <table>
             <tr>
               <td>{detail.strMeasure1}</td>
               <td>{detail.strMeasure2}</td>
@@ -170,18 +171,19 @@ const DetailList = () => {
               <td>{detail.strMeasure19}</td>
               <td>{detail.strMeasure20}</td>
             </tr>
-          </table>
+          </table> */}
 
-          {/* <button
+            {/* <button
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 100 }}
             onClick={() => setYoutube(true)}
           >
             Watch on YouTube
           </button> */}
+            {/* </div> */}
+          </div>
         </div>
       </div>
-
       {/* <ModalVideo
         channel="youtube"
         autoplay
