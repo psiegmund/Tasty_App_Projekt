@@ -3,9 +3,8 @@ import React, { useState, useEffect } from "react";
 // import ModalVideo from "react-modal-video";
 
 const DetailList = () => {
-  let resultOutput = document.getElementById("ingredientsTable");
   const [detail, setDetail] = useState([]);
-  const [youtube, setYoutube] = useState(false);
+  // const [youtube, setYoutube] = useState(false);
   const { id } = useParams();
   console.log(id);
 
@@ -36,8 +35,8 @@ const DetailList = () => {
 
   const ingredientsList = () => {
     for (let i = 1; i < 21; i++) {
-      let requestIngredient = "strIngredient" + i;
-      let requestMeasure = "strMeasure" + i;
+      // let requestIngredient = "strIngredient" + i;
+      // let requestMeasure = "strMeasure" + i;
       // let detArr = [];
       // detArr += detail[requestIngredient];
       // detArr += detail[requestMeasure];
@@ -120,13 +119,13 @@ const DetailList = () => {
             </tr>
           </table>
 
-          <button
+          {/* <button
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 100 }}
             onClick={() => setYoutube(true)}
           >
             Watch on YouTube
-          </button>
+          </button> */}
         </div>
       </div>
 

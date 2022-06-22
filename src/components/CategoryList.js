@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import CategoryItem from "./CategoryItem";
 import AuthContext from "../context/AuthContext";
 

@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import DetailList from "./components/DetailList";
 import MealList from "./components/MealList";
 import Main from "./pages/Main";
-import RandomItem from "./components/RandomItem";
+// import RandomItem from "./components/RandomItem";
 import "./App.scss";
 import { AuthContextProvider } from "./context/AuthContext";
 import Search from "./components/Search";
