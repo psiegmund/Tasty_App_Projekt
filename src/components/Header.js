@@ -7,7 +7,6 @@ const Header = () => {
 
   const handleChange = (e) => {
     e.preventDefault();
-    setInput(e.target.value);
     setInput("");
   };
 
@@ -19,7 +18,8 @@ const Header = () => {
 
       <h1>Find a recipe,an idea,an inspiration...</h1>
       <form onSubmit={handleChange} action="">
-        <input style={{ outlineColor: "#FF6E85" }}
+        <input
+          style={{ outlineColor: "#FF6E85" }}
           type="search"
           placeholder="Type something to search"
           value={input}

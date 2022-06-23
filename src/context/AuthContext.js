@@ -20,7 +20,7 @@ export const AuthContextProvider = (props) => {
       .then((json) => setRandom(json.meals[0]));
   }, [test]);
   const randomId = random.idMeal;
-  //   console.log(random);
+  console.log(random);
 
   // const [searchData, setSearchData] = useState([]);
 

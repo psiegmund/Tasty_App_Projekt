@@ -36,21 +36,26 @@ export default function Search() {
   // console.log(data);
 
   return (
-    <div className="result">
+    <div className="searchContainer">
       <h1 style={{ color: "orange" }}>
-        {data ? `${data.length} results found for ${input} ` : `Not found`}
+        {data
+          ? `${data.length} results found for ${input} `
+          : `There is no matching data...`}
       </h1>
 
-      {data
-        ? data.map((el, i) => (
-            <SearchItem
-              key={i}
-              id={el.idMeal}
-              name={el.strMeal}
-              img={el.strMealThumb}
-            />
-          ))
-        : "Not found"}
+      <div className="searchListContainer">
+        {data
+          ? data.map((el, i) => (
+              <SearchItem
+                i={i}
+                key={i}
+                id={el.idMeal}
+                name={el.strMeal}
+                img={el.strMealThumb}
+              />
+            ))
+          : null}
+      </div>
     </div>
   );
 }
