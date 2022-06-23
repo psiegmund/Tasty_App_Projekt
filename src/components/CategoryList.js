@@ -6,6 +6,8 @@ import AuthContext from "../context/AuthContext";
 const CategoryList = () => {
   const { data, randomId } = useContext(AuthContext);
 
+  console.log(randomId);
+
   //   const [data, setData] = useState([]);
   //   const [random, setRandom] = useState([]);
 

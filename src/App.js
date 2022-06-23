@@ -31,7 +31,6 @@ function App() {
           <Route path="/category/:name" element={<MealList />} />
           <Route path="/detail/:id" element={<DetailList />} />
           <Route path="/search/:input" element={<Search />} />
-          {/* <Route path="/search" element={<Main />} /> */}
         </Routes>
         <Footer />
       </div>
