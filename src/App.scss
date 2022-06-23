@@ -36,21 +36,40 @@
 .headerContainer {
     text-align: center;
     padding: 40px;
-    height: 45vh;
+    height: 55vh;
+    // height: 40vh;
     width: 100%;
+
+    img {
+        transition: all 0.4s ease-in-out;
+        &:hover{
+            transform: scale(1.1);
+            transition: all 0.4s ease-in-out;
+        }
+    }
 
     h1 {
         color: #FF6E86;
+<<<<<<< HEAD
         font-size: 40px;
+=======
+        // font-size: 30px;
+        font-size: 3.5rem;
+>>>>>>> 77712c2af699c94a69dfc0421ad44ee8356c6e9b
         padding: 10px;
     }
 
     form {
 
         input[type="search"] {
-            padding: 5px 5px;
+            // padding: 5px 5px;
+            padding: 10px;
             margin: 20px;
+<<<<<<< HEAD
             width: 250px;
+=======
+            width: 300px;
+>>>>>>> 77712c2af699c94a69dfc0421ad44ee8356c6e9b
             border-radius: 5px;
             color: #FF6E86;
             background-color: #FFAC614D;
@@ -58,10 +77,12 @@
         }
 
         button {
-            padding: 5px;
+            // padding: 5px;
+            padding: 10px;
             width: 100px;
             border-radius: 5px;
             color: white;
+            font-size: 1rem;
             font-weight: bold;
             background-color: #FF6E85;
             border-color: transparent;
@@ -74,6 +95,7 @@
 .categoryListContainer {
     color: #FF6E86;
     font-weight: bold;
+    padding: 0 16%;
 
 
     .categoryList {
@@ -85,10 +107,15 @@
     }
 
     h1 {
+<<<<<<< HEAD
         padding-left: 25%;
         padding-top: 10px;
         height: 10vh;
         font-size: 35px;
+=======
+        font-size: 2rem;
+        padding: 4vh 4%;
+>>>>>>> 77712c2af699c94a69dfc0421ad44ee8356c6e9b
     }
 }
 
@@ -99,36 +126,53 @@
     background-color: #FF6E86;
     border-radius: 10px;
     color: white;
-    height: 35vh;
+    height: 280px;
     text-align: center;
+    transition: all 0.5s ;
+
 
     h1 {
+<<<<<<< HEAD
         padding: 35px 0px;
         font-size: 35px;
+=======
+        padding: 3vh 0 1vh 0;
+        font-size: 2rem;
+>>>>>>> 77712c2af699c94a69dfc0421ad44ee8356c6e9b
         text-decoration: none;
     }
 
     img {
         padding: 20px 10px;
-        width: 80%;
-        height: 25vh;
+        width: 90%;
+        height: 200px;
         object-fit: contain;
     }
 
     h3 {
         padding-top: 40%;
-        font-size: 25px;
+        font-size: 2rem;
     }
-}
 
+<<<<<<< HEAD
 .categoryItemContainer:hover {
     border-radius: 50%;
     transition: all 0.5s ease;
+=======
+    &:hover{
+        overflow: hidden;
+        transition: all 0.4s;
+        transform: scale(1.1);
+         border-radius: 50%;
+    }
+>>>>>>> 77712c2af699c94a69dfc0421ad44ee8356c6e9b
 }
 
-/*-----CATEGORY DETAILLIST----*/
 
-.mealListContainer {
+
+/*-----MEALLIST & SEARCHLIST-----*/
+
+.mealListContainer,.searchListContainer{
     width: 100%;
     display: grid;
     grid-template-columns: auto auto;
@@ -144,11 +188,12 @@
     }
 }
 
-.mealItemContainer {
+.mealItemContainer ,.searchItemContainer {
     background-color: #FF6E86;
     border-radius: 10px;
     padding: 10px 60px;
     height: 500px;
+    transition: all 0.4s;
 
     h1 {
         height: 110px;
@@ -158,13 +203,26 @@
         height: 40vh;
         box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.393);
     }
+
+    &:hover{
+        transform: scale(1.05);
+        transition: all 0.4s;
+    }
 }
 
-/*-------DETAILLIST-----*/
+.searchContainer,.mealContainer{
+    padding:0 17% ;
+    
+    h1{
+        padding: 2vh 0;
+    }
+    
+}
 
-.detailListContainer,
-.searchItemContainer {
-    margin: 0 160px;
+/*-------DETAILLIST ----*/
+
+.detailListContainer{
+    margin: 0 14%;
 
     div {
         text-align: center;
@@ -172,10 +230,10 @@
         color: white;
         border-radius: 10px;
         margin: 20px 20px;
-        padding: 50px;
+        padding: 30px;
 
         img {
-            width: 50%;
+            width: 100%;
             padding: 20px;
             border-style: solid;
             border-color: #FFAC61;
@@ -187,25 +245,19 @@
         }
 
         .instructionsList {
-            list-style: none;
             text-align: left;
         }
 
         .descriptionContainer {
             display: grid;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 60% 40%;
+            gap: 30px;
             line-height: 2em;
-
-            td {
-                display: flex;
-                justify-content: space-around;
-                font-weight: bold;
-                text-align: left;
+         
+            div{
+            padding: 0;
             }
-
-            /*display: grid;
-                grid-template-columns: 60% 80%;*/
-
+       
             button {
                 background-color: white;
                 color: #FF6E86;
@@ -219,6 +271,7 @@
 
     }
 }
+
 
 /*-------FOOTER--------*/
 
