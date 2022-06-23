@@ -71,6 +71,7 @@ const DetailList = () => {
             {detail.strInstructions ? ingredientsList() : null}
 
             <button onClick={() => setOpen(true)}>Watch on YouTube</button>
+
           </div>
         </div>
         <ModalVideo
