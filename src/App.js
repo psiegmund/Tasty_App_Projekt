@@ -15,6 +15,10 @@ function App() {
 
   return (
     <AuthContextProvider>
+<<<<<<< HEAD
+      <div className="App" style={{ color: white ? 'black' : 'white', backgroundColor: white ? 'white' : 'black' }}>
+        <button onClick={() => setWhite(!white)}> → {white ? 'Blackmode' : 'Whitemode'}</button>
+=======
       <div
         className="App"
         style={{
@@ -25,6 +29,7 @@ function App() {
         <button onClick={() => setWhite(!white)}>
           Change to {white ? "Blackmode" : "Whitemode"}
         </button>
+>>>>>>> 77712c2af699c94a69dfc0421ad44ee8356c6e9b
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
