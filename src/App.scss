@@ -319,6 +319,12 @@ iframe {
     }
 
     .categoryListContainer {
+
+        &hover {
+            scale: none;
+            transform: none;
+        }
+
         .categoryList {
             flex-wrap: nowrap;
             flex-direction: column;
@@ -326,6 +332,8 @@ iframe {
     }
 
     .randomContainer {
+        scale: none;
+        transform: none;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -444,6 +452,13 @@ iframe {
         align-items: center;
         width: 100%;
         border-radius: 0;
+        transition: none;
+
+        &:hover {
+            transition: none;
+            transform: none;
+            border-radius: 0;
+        }
 
         h3 {
             padding: 0;
@@ -461,7 +476,14 @@ iframe {
                 border-radius: 0;
                 width: 100%;
                 height: 110%;
+
+                &:hover {
+                    transform: none;
+                    scale: none;
+                }
             }
+
+
         }
     }
 
