@@ -80,7 +80,6 @@ const DetailList = () => {
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            style={{ width: "50%", height: "250px" }}
             src={
               detail.strYoutube
                 ? `https://www.youtube.com/embed/${detail.strYoutube.slice(32)}`

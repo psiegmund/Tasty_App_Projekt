@@ -16,6 +16,11 @@
     }
 }
 
+iframe {
+    width: 50%;
+    height: 250px;
+}
+
 /*-------LightDark-----*/
 
 .App {
@@ -402,6 +407,15 @@
 
 // MEDIA QUERY MOBILE DISPLAY
 @media only screen and (min-width:350px) and (max-width: 576px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
     .App {
         max-width: 576px;
         margin: 0;
@@ -451,8 +465,24 @@
         }
     }
 
+    .searchContainer {
+        .searchListContainer {
+            display: block;
+
+            .searchItemContainer {
+                border-radius: 0;
+                height: 110%;
+            }
+        }
+    }
+
     .mealContainer {
         .mealListContainer {
+
+            h1 {
+                width: 90%;
+            }
+
             // flex-wrap: nowrap;
             flex-direction: column;
             width: 100%;
