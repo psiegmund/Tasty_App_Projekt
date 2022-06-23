@@ -1,10 +1,16 @@
 const Footer = () => {
   return (
     <section className="footerContainer">
-      <i class="lab la-instagram"><a href="https://www.instagram.com/"></a></i>
-      <i class="lab la-youtube"><a href="https://www.youtube.com/"></a></i>
-      <i class="lab la-facebook-f"><a href="https://de-de.facebook.com/"></a></i>
-    </section>
+      <a target={'_blank'} href="https://www.instagram.com/">
+        <i class="lab la-instagram"></i>
+      </a>
+      <a target={'_blank'} href="https://www.youtube.com/">
+        <i class="lab la-youtube"></i>
+      </a>
+      <a target={'_blank'} href="https://de-de.facebook.com/">
+        <i class="lab la-facebook-f"></i>
+      </a>
+    </section >
   );
 };
 export default Footer;

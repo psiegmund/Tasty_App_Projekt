@@ -4,8 +4,10 @@ const SearchItem = ({ img, id, name }) => {
   return (
     <Link to={`/detail/${id}`}>
       <section className="searchItemContainer">
-        <h1>{name}</h1>
-        <img src={img} alt={img} />
+        <div>
+          <h1>{name}</h1>
+          <img src={img} alt={img} />
+        </div>
       </section>
     </Link>
   );
