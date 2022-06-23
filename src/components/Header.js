@@ -6,8 +6,8 @@ const Header = () => {
   const [input, setInput] = useState();
 
   const handleChange = (e) => {
-    e.preventDefault();
     setInput("");
+    e.preventDefault();
   };
 
   return (
@@ -17,7 +17,7 @@ const Header = () => {
       </Link>
 
       <h1>Find a recipe,an idea,an inspiration...</h1>
-      <form onSubmit={handleChange} action="">
+      <form onClick={handleChange} action="">
         <input
           style={{ outlineColor: "#FF6E85" }}
           type="search"

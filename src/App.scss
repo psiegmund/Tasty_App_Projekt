@@ -19,6 +19,9 @@
 /*-------LightDark-----*/
 
 .App {
+    min-width: 350px;
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 10px;
     font-family: Amatic SC;
 
@@ -36,16 +39,14 @@
 .headerContainer {
     text-align: center;
     padding: 40px;
-    height: 55vh;
-    // height: 40vh;
     width: 100%;
 
     img {
-        transition: all 0.4s ease-in-out;
+        transition: all 0.5s ease-in-out;
 
         &:hover {
             transform: scale(1.1);
-            transition: all 0.4s ease-in-out;
+            transition: all 0.5s ease-in-out;
         }
     }
 
@@ -63,7 +64,7 @@
             // padding: 5px 5px;
             padding: 10px;
             margin: 20px;
-            width: 300px;
+            width: 30%;
             border-radius: 5px;
             color: #FF6E86;
             background-color: #FFAC614D;
@@ -94,19 +95,26 @@
 
     .categoryList {
         width: 100%;
-        display: grid;
-        grid-template-columns: auto auto auto;
+        // display: grid;
+        // grid-template-columns: auto auto auto;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 35px;
     }
 
     h1 {
+        text-align: center;
         font-size: 2rem;
         padding: 4vh 4%;
     }
 }
 
 /*------CATEGORY ITEM------*/
+
+.randomContainer {
+    width: 276px;
+}
 
 .categoryItemContainer,
 .randomContainer {
@@ -120,7 +128,7 @@
 
     h1 {
         padding: 3vh 0 1vh 0;
-        font-size: 2rem;
+        font-size: 3rem;
         text-decoration: none;
     }
 
@@ -142,100 +150,114 @@
         transform: scale(1.1);
         border-radius: 50%;
     }
+}
 
+// /-----MEALLIST & SEARCHLIST-----/
 
+.mealListContainer,
+.searchListContainer {
+    width: 100%;
+    // display: grid;
+    // grid-template-columns: auto auto;
+    // justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
 
+    h1 {
+        padding: 20px 0px;
+        width: 250px;
+        margin: 0 auto;
+        color: white;
+        font-size: 25px;
+        text-decoration: none;
+    }
+}
 
-    /*-----MEALLIST & SEARCHLIST-----*/
+.mealItemContainer,
+.searchItemContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FF6E86;
+    border-radius: 10px;
+    padding: 10px 40px;
+    height: 500px;
+    transition: all 0.4s;
 
-    .mealListContainer,
-    .searchListContainer {
-        width: 100%;
-        display: grid;
-        grid-template-columns: auto auto;
-        justify-content: center;
-        gap: 35px;
-
-        h1 {
-            padding: 20px 0px;
-            width: 250px;
-            color: white;
-            font-size: 25px;
-            text-decoration: none;
-        }
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+        height: 110px;
     }
 
-    .mealItemContainer,
-    .searchItemContainer {
-        background-color: #FF6E86;
-        border-radius: 10px;
-        padding: 10px 60px;
-        height: 500px;
-        transition: all 0.4s;
+    img {
+        height: 40vh;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.393);
+    }
 
-        h1 {
-            height: 110px;
-        }
+    &:hover {
+        transform: scale(1.05);
+        transition: all 0.4s;
+    }
+}
+
+.searchContainer,
+.mealContainer {
+    // padding: 0 10%;
+
+    h1 {
+        text-align: center;
+        padding: 2vh 0;
+    }
+
+}
+
+
+
+/*-------DETAILLIST ----*/
+
+.detailListContainer {
+    margin: 0 10%;
+
+    div {
+        text-align: center;
+        background-color: #FF6E86;
+        color: white;
+        border-radius: 10px;
+        margin: 20px 20px;
+        padding: 30px;
 
         img {
-            height: 40vh;
-            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.393);
+            width: 100%;
+            padding: 20px;
+            border-style: solid;
+            border-color: #FFAC61;
         }
-
-        &:hover {
-            transform: scale(1.05);
-            transition: all 0.4s;
-        }
-    }
-
-    .searchContainer,
-    .mealContainer {
-        padding: 0 17%;
 
         h1 {
-            padding: 2vh 0;
+            padding: 30px 0;
+            font-size: 35px;
         }
 
-    }
+        .descriptionContainer {
+            // display: grid;
+            // grid-template-columns: 60% 40%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            line-height: 2em;
 
-    /*-------DETAILLIST ----*/
-
-    .detailListContainer {
-        margin: 0 14%;
-
-        div {
-            text-align: center;
-            background-color: #FF6E86;
-            color: white;
-            border-radius: 10px;
-            margin: 20px 20px;
-            padding: 30px;
-
-            img {
-                width: 100%;
-                padding: 20px;
-                border-style: solid;
-                border-color: #FFAC61;
+            div:nth-of-type(1) {
+                padding: 0;
+                width: 50%;
             }
 
-            h1 {
-                padding: 30px 0;
-                font-size: 35px;
-            }
-
-            .instructionsList {
-                text-align: left;
-            }
-
-            .descriptionContainer {
-                display: grid;
-                grid-template-columns: 60% 40%;
-                gap: 30px;
-                line-height: 2em;
-
-                div {
-                    padding: 0;
-                }
+            div:nth-of-type(2) {
+                padding: 0;
+                width: 30%;
 
                 button {
                     background-color: white;
@@ -246,24 +268,242 @@
                     border-radius: 5px;
                     border-style: none;
                 }
+
+                .ingredientsDiv {
+                    width: 100%;
+                    margin: 0;
+                }
             }
+
+
+
+
+
+            .instructionsList {
+                text-align: left;
+
+
+            }
+
 
         }
     }
+}
 
 
-    /*-------FOOTER--------*/
+/*-------FOOTER--------*/
 
-    .footerContainer {
+
+.footerContainer {
+    width: 100%;
+    height: 20vh;
+    padding-top: 60px;
+    text-align: center;
+
+    i {
+        font-size: 35px;
+        padding: 3px;
+        color: grey;
+    }
+}
+
+// MEDIA QUERY MEDIUM DISPLAY
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+    .App {
+        max-width: 992px;
+    }
+
+    .categoryListContainer {
+        .categoryList {
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+    }
+
+    .randomContainer {
         width: 100%;
-        height: 20vh;
-        padding-top: 60px;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        i {
-            font-size: 35px;
-            padding: 3px;
-            color: grey;
+        h3 {
+            padding: 0;
+            font-size: 3rem;
+        }
+    }
+
+    .mealContainer {
+        .mealListContainer {
+            // flex-wrap: nowrap;
+            flex-direction: column;
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+
+    .headerContainer {
+        padding: 0;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        form {
+            text-align: center;
+
+            input[type=search] {
+                min-width: 50%;
+            }
+        }
+    }
+
+    .detailListContainer {
+        margin: 0;
+
+        div {
+            margin: 0;
+
+            .descriptionContainer {
+                margin: 0;
+                padding: 0;
+                flex-direction: column;
+                text-align: center;
+
+                div:nth-of-type(1) {
+                    width: 100%;
+                    text-align: left;
+                }
+
+                div:nth-of-type(2) {
+                    width: 100%;
+                    text-align: right;
+                    padding: 0 50px 20px 0;
+
+                    h1 {
+                        text-align: right;
+                    }
+
+                    div {
+                        text-align: right;
+                        justify-content: right;
+                        padding-bottom: 30px;
+                    }
+
+                    button {
+                        margin: 0 auto;
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// MEDIA QUERY MOBILE DISPLAY
+@media only screen and (min-width:350px) and (max-width: 576px) {
+    .App {
+        max-width: 576px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .headerContainer {
+        h1 {
+            font-size: 2rem;
+            padding: 0;
+        }
+
+        form {
+            text-align: center;
+
+            input[type=search] {
+                width: 90%;
+                display: block;
+            }
+        }
+    }
+
+    .randomContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-radius: 0;
+
+        h3 {
+            padding: 0;
+            font-size: 3rem;
+        }
+    }
+
+    .categoryListContainer {
+        padding: 0;
+
+        .categoryList {
+            display: block;
+
+            .categoryItemContainer {
+                border-radius: 0;
+                width: 100%;
+                height: 110%;
+            }
+        }
+    }
+
+    .mealContainer {
+        .mealListContainer {
+            // flex-wrap: nowrap;
+            flex-direction: column;
+            width: 100%;
+            gap: 0;
+            margin: 0 auto;
+
+            .mealItemContainer {
+                border-radius: 0;
+            }
+        }
+    }
+
+    .detailListContainer {
+        margin: 0;
+
+        div {
+            margin: 0;
+            border-radius: 0;
+
+            .descriptionContainer {
+                margin: 0;
+                padding: 0;
+                flex-direction: column;
+                text-align: center;
+
+                div:nth-of-type(1) {
+                    width: 100%;
+                    text-align: left;
+                }
+
+                div:nth-of-type(2) {
+                    width: 100%;
+                    text-align: right;
+                    padding: 0 50px 20px 0;
+
+                    h1 {
+                        text-align: right;
+                    }
+
+                    div {
+                        text-align: right;
+                        justify-content: right;
+                        padding-bottom: 30px;
+                    }
+
+                    button {
+                        margin: 0 auto;
+                        width: 90%;
+                    }
+                }
+            }
         }
     }
 }

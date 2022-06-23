@@ -1,10 +1,9 @@
 import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import ModalVideo from "react-modal-video";
 
 const DetailList = () => {
   const [detail, setDetail] = useState([]);
-  const [isOpen, setOpen] = useState(false);
+  const [youTube, setYouTube] = useState(true);
   const { id } = useParams();
   // console.log(id);
 
@@ -49,11 +48,11 @@ const DetailList = () => {
     // console.log(measures);
     // console.log(ingredients);
     const measuresInstructions = measures.map((item, i) => (
-      <h3 key={i} style={{ textAlign: "left" }}>
+      <h3 key={i}>
         {item} {ingredients[i]}
       </h3>
     ));
-    return <div>{measuresInstructions}</div>;
+    return <div className="ingredientsDiv">{measuresInstructions}</div>;
   };
 
   return (
@@ -62,25 +61,34 @@ const DetailList = () => {
         <img src={detail.strMealThumb} alt="Alt" />
         <div className="descriptionContainer">
           <div>
-            <h1 style={{ textAlign: "left" }}>{detail.strMeal}</h1>
+            <h1>{detail.strMeal}</h1>
             {detail.strInstructions ? instructionsList() : null}
           </div>
           <div>
-            <h1 style={{ textAlign: "left" }}>Ingredients</h1>
+            <h1>Ingredients</h1>
 
             {detail.strInstructions ? ingredientsList() : null}
 
-            <button onClick={() => setOpen(true)}>Watch on YouTube</button>
+            <button onClick={() => setYouTube(!youTube)}>Watch on YouTube</button>
 
           </div>
         </div>
-        <ModalVideo
-          channel="youtube"
-          autoplay
-          isOpen={isOpen}
-          videoId={detail.strYoutube ? detail.strYoutube.slice(32) : null}
-          onClose={() => setOpen(false)}
-        />
+        {youTube ? (
+          <iframe
+            // style={{ display: youTube ? "block" : "none" }}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{ width: "50%", height: "250px" }}
+            src={
+              detail.strYoutube
+                ? `https://www.youtube.com/embed/${detail.strYoutube.slice(32)}`
+                : null
+            }
+            frameBorder="0"
+          />
+        ) : null}
       </div>
     </section>
   );
