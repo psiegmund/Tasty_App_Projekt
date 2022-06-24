@@ -7,7 +7,7 @@ const MealItem = ({ img, id, name, i }) => {
                 className="mealItemContainer"
                 style={{ backgroundColor: i % 2 === 0 ? "  #FF6E85" : "#ffab61e8" }}
             >
-                <h1>{name}</h1>
+                <h1>{name.length > 42 ? name.slice(0, 42) + "..." : name}</h1>
                 <img src={img} alt={img} />
             </section>
         </Link>
