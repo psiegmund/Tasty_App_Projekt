@@ -4,9 +4,9 @@ import CategoryItem from "./CategoryItem";
 import AuthContext from "../context/AuthContext";
 
 const CategoryList = () => {
-  const { data, randomId } = useContext(AuthContext);
+  const { data } = useContext(AuthContext);
 
-  console.log(randomId);
+  // console.log(randomId);
 
   return (
     <section className="categoryListContainer">
@@ -22,7 +22,7 @@ const CategoryList = () => {
           />
         ))}
 
-        <Link to={`/detail/${randomId}`}>
+        <Link to={`/detailrandom`}>
           <div
             style={{ backgroundColor: "#ffab61e8" }}
             className="randomContainer"
