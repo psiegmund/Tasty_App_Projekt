@@ -514,7 +514,13 @@ iframe {
 
             .searchItemContainer {
                 border-radius: 0;
+                width: 100%;
                 height: 110%;
+
+                &:hover {
+                    transform: none;
+                    scale: none;
+                }
             }
         }
     }
