@@ -4,48 +4,23 @@ import CategoryItem from "./CategoryItem";
 import AuthContext from "../context/AuthContext";
 
 const CategoryList = () => {
-  const { data, randomId } = useContext(AuthContext);
-
-  console.log(randomId);
-
-  //   const [data, setData] = useState([]);
-  //   const [random, setRandom] = useState([]);
-
-  //   let test;
-
-  //   useEffect(() => {
-  //     fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
-  //       .then((res) => res.json())
-  //       .then((json) => setData(json.categories));
-  //   }, [test]);
-
-  //   console.log(data);
-
-  //   useEffect(() => {
-  //     fetch("https://www.themealdb.com/api/json/v1/1/random.php")
-  //       .then((res) => res.json())
-  //       .then((json) => setRandom(json.meals[0]));
-  //   }, [test]);
-
-  //   //   console.log(random);
-
-  //   const randomId = random.idMeal;
+  const { data } = useContext(AuthContext);
 
   return (
     <section className="categoryListContainer">
-      <h1>Or go through our categories</h1>
+      <h1>Or go through our categories <a href="arrow1"><span>↓</span></a></h1>
       <div className="categoryList">
         {data.map((el, i) => (
           <CategoryItem
-            i={i}
             key={i}
+            i={i}
             id={el.idCategory}
             name={el.strCategory}
             img={el.strCategoryThumb}
           />
         ))}
 
-        <Link to={`/detail/${randomId}`}>
+        <Link to={`/detailrandom`}>
           <div
             style={{ backgroundColor: "#ffab61e8" }}
             className="randomContainer"
