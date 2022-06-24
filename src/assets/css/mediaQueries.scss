@@ -189,13 +189,13 @@
     }
 
     .mealContainer {
+
         .mealListContainer {
 
             h1 {
                 width: 90%;
             }
 
-            // flex-wrap: nowrap;
             flex-direction: column;
             width: 100%;
             gap: 0;
@@ -203,6 +203,11 @@
 
             .mealItemContainer {
                 border-radius: 0;
+
+                &:hover {
+                    transition: none;
+                    transform: none;
+                }
             }
         }
     }
