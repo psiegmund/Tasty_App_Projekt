@@ -16,7 +16,7 @@ const Header = () => {
         <img src={logo} alt={logo} />
       </Link>
 
-      <h1>Find a recipe,an idea,an inspiration...</h1>
+      <h1>Find a recipe, an idea, an inspiration...</h1>
       <form onClick={handleChange} action="">
         <input
           style={{ outlineColor: "#FF6E85" }}

@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
-import React, { useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import CategoryItem from "./CategoryItem";
 import AuthContext from "../context/AuthContext";
 
 const CategoryList = () => {
   const { data, randomId } = useContext(AuthContext);
-
-  console.log(randomId);
 
   //   const [data, setData] = useState([]);
   //   const [random, setRandom] = useState([]);
@@ -33,11 +31,10 @@ const CategoryList = () => {
 
   return (
     <section className="categoryListContainer">
-      <h1>Or go through our categories</h1>
+      <h1>Or go through our categories <a href="arrow1"><span>↓</span></a></h1>
       <div className="categoryList">
         {data.map((el, i) => (
           <CategoryItem
-            i={i}
             key={i}
             id={el.idCategory}
             name={el.strCategory}
@@ -46,10 +43,7 @@ const CategoryList = () => {
         ))}
 
         <Link to={`/detail/${randomId}`}>
-          <div
-            style={{ backgroundColor: "#ffab61e8" }}
-            className="randomContainer"
-          >
+          <div className="randomContainer">
             <h3>Random</h3>
           </div>
         </Link>
