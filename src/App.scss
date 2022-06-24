@@ -144,7 +144,10 @@ iframe {
     }
 
     img {
-        height: 40vh;
+        height: 250px;
+        width: 250px;
+        object-fit: contain;
+        margin: 0 auto;
         box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.393);
     }
 
