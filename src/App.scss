@@ -19,8 +19,8 @@
 }
 
 iframe {
-    width: 50%;
-    height: 250px;
+    width: 60%;
+    height: 300px;
 }
 
 /*-------LightDark-----*/
@@ -70,7 +70,6 @@ iframe {
 /*------CATEGORY ITEM------*/
 .randomContainer {
     width: 276px;
-    height: 300px;
 }
 
 .categoryItemContainer,
@@ -78,6 +77,7 @@ iframe {
     background-color: #FF6E86;
     border-radius: 10px;
     color: white;
+    height: 280px;
     text-align: center;
     transition: all 0.5s;
 
