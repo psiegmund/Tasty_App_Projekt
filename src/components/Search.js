@@ -22,7 +22,7 @@ export default function Search() {
     <div className="searchContainer">
       <h1 style={{ color: "orange" }}>
         {data
-          ? `${data.length} results found for ${input} `
+          ? `${data.length} results found for "${input}" `
           : `There is no matching data...`}
       </h1>
 
