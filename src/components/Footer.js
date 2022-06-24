@@ -1,3 +1,6 @@
+import "./../assets/css/Footer.scss";
+
+
 const Footer = () => {
   return (
     <section className="footerContainer">

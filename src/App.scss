@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700');
 
+
+// GENERAL.SCSS
 * {
     margin: 0;
     padding: 0;
@@ -39,64 +41,14 @@ iframe {
     }
 }
 
-/*-------HEADER--------*/
 
-.headerContainer {
-    text-align: center;
-    padding: 40px;
-    width: 100%;
-
-    img {
-        transition: all 0.5s ease-in-out;
-
-        &:hover {
-            transform: scale(1.1);
-            transition: all 0.5s ease-in-out;
-        }
-    }
-
-    h1 {
-        color: #FF6E86;
-        font-size: 40px;
-        // font-size: 30px;
-        font-size: 3.5rem;
-        padding: 10px;
-    }
-
-    form {
-
-        input[type="search"] {
-            // padding: 5px 5px;
-            padding: 10px;
-            margin: 20px;
-            width: 30%;
-            border-radius: 5px;
-            color: #FF6E86;
-            background-color: #FFAC614D;
-            border-color: transparent;
-        }
-
-        button {
-            // padding: 5px;
-            padding: 10px;
-            width: 100px;
-            border-radius: 5px;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            background-color: #FF6E85;
-            border-color: transparent;
-        }
-    }
-}
-
+// CATEGORY.SCSS
 /*-------CATEGORY LIST--------*/
 
 .categoryListContainer {
     color: #FF6E86;
     font-weight: bold;
     padding: 0 16%;
-
 
     .categoryList {
         width: 100%;
@@ -116,7 +68,6 @@ iframe {
 }
 
 /*------CATEGORY ITEM------*/
-
 .randomContainer {
     width: 276px;
 }
@@ -129,7 +80,6 @@ iframe {
     height: 280px;
     text-align: center;
     transition: all 0.5s;
-
 
     h1 {
         padding: 3vh 0 1vh 0;
@@ -146,7 +96,7 @@ iframe {
 
     h3 {
         padding-top: 40%;
-        font-size: 2rem;
+        font-size: 3.5rem;
     }
 
     &:hover {
@@ -158,13 +108,9 @@ iframe {
 }
 
 // /-----MEALLIST & SEARCHLIST-----/
-
 .mealListContainer,
 .searchListContainer {
     width: 100%;
-    // display: grid;
-    // grid-template-columns: auto auto;
-    // justify-content: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -210,16 +156,12 @@ iframe {
 
 .searchContainer,
 .mealContainer {
-    // padding: 0 10%;
 
     h1 {
         text-align: center;
         padding: 2vh 0;
     }
-
 }
-
-
 
 /*-------DETAILLIST ----*/
 
@@ -246,9 +188,19 @@ iframe {
             font-size: 35px;
         }
 
+        .mealDescription {
+            font-family: 'Roboto';
+            margin: 0;
+            padding: 0;
+            text-align: left;
+
+
+            span {
+                margin-right: 4%;
+            }
+        }
+
         .descriptionContainer {
-            // display: grid;
-            // grid-template-columns: 60% 40%;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -277,312 +229,15 @@ iframe {
                 .ingredientsDiv {
                     width: 100%;
                     margin: 0;
+                    font-size: 1.1rem;
+                    font-weight: 800;
                 }
             }
-
-
-
-
 
             .instructionsList {
                 text-align: left;
                 font-weight: 800;
-
-
-            }
-
-
-        }
-    }
-}
-
-
-// /-------FOOTER--------/ 
-.footerContainer {
-    width: 100%;
-    height: 20vh;
-    padding-top: 60px;
-    text-align: center;
-
-
-
-    i {
-        font-size: 35px;
-        padding: 3px;
-        color: grey;
-        transition: all 0.4s ease-in-out;
-
-        &:hover {
-            transform: scale(1.3);
-            transition: all 0.4s ease-in-out;
-        }
-
-
-    }
-
-    .la-instagram:hover {
-        color: #FF6E85;
-    }
-
-    .la-youtube:hover {
-        color: #F22613;
-    }
-
-    .la-facebook-f:hover {
-        color: #1F3A93;
-    }
-
-}
-
-// MEDIA QUERY MEDIUM DISPLAY
-@media only screen and (min-width: 576px) and (max-width: 992px) {
-    .App {
-        max-width: 992px;
-    }
-
-    .categoryListContainer {
-
-        &hover {
-            scale: none;
-            transform: none;
-        }
-
-        .categoryList {
-            flex-wrap: nowrap;
-            flex-direction: column;
-        }
-    }
-
-    .randomContainer {
-        scale: none;
-        transform: none;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        h3 {
-            padding: 0;
-            font-size: 3rem;
-        }
-    }
-
-    .mealContainer {
-        .mealListContainer {
-            // flex-wrap: nowrap;
-            flex-direction: column;
-            width: 70%;
-            margin: 0 auto;
-        }
-    }
-
-    .headerContainer {
-        padding: 0;
-
-        h1 {
-            font-size: 2rem;
-        }
-
-        form {
-            text-align: center;
-
-            input[type=search] {
-                min-width: 50%;
-            }
-        }
-    }
-
-    .detailListContainer {
-        margin: 0;
-
-        div {
-            margin: 0;
-
-            .descriptionContainer {
-                margin: 0;
-                padding: 0;
-                flex-direction: column;
-                text-align: center;
-
-                div:nth-of-type(1) {
-                    width: 100%;
-                    text-align: left;
-                }
-
-                div:nth-of-type(2) {
-                    width: 100%;
-                    text-align: right;
-                    padding: 0 50px 20px 0;
-
-                    h1 {
-                        text-align: right;
-                    }
-
-                    div {
-                        text-align: right;
-                        justify-content: right;
-                        padding-bottom: 30px;
-                    }
-
-                    button {
-                        margin: 0 auto;
-                        width: 90%;
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-// MEDIA QUERY MOBILE DISPLAY
-@media only screen and (min-width:350px) and (max-width: 576px) {
-
-    * {
-        box-sizing: border-box;
-    }
-
-    iframe {
-        width: 100%;
-    }
-
-    .App {
-        max-width: 576px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .headerContainer {
-        h1 {
-            font-size: 2rem;
-            padding: 0;
-        }
-
-        form {
-            text-align: center;
-
-            input[type=search] {
-                width: 90%;
-                display: block;
-            }
-        }
-    }
-
-    .randomContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        border-radius: 0;
-        transition: none;
-
-        &:hover {
-            transition: none;
-            transform: none;
-            border-radius: 0;
-        }
-
-        h3 {
-            padding: 0;
-            font-size: 3rem;
-        }
-    }
-
-    .categoryListContainer {
-        padding: 0;
-
-        .categoryList {
-            display: block;
-
-            .categoryItemContainer {
-                border-radius: 0;
-                width: 100%;
-                height: 110%;
-
-                &:hover {
-                    transform: none;
-                    scale: none;
-                }
-            }
-
-
-        }
-    }
-
-    .searchContainer {
-        .searchListContainer {
-            display: block;
-
-            .searchItemContainer {
-                border-radius: 0;
-                width: 100%;
-                height: 110%;
-
-                &:hover {
-                    transform: none;
-                    scale: none;
-                }
-            }
-        }
-    }
-
-    .mealContainer {
-        .mealListContainer {
-
-            h1 {
-                width: 90%;
-            }
-
-            // flex-wrap: nowrap;
-            flex-direction: column;
-            width: 100%;
-            gap: 0;
-            margin: 0 auto;
-
-            .mealItemContainer {
-                border-radius: 0;
-            }
-        }
-    }
-
-    .detailListContainer {
-        margin: 0;
-
-        div {
-            margin: 0;
-            border-radius: 0;
-
-            .descriptionContainer {
-                margin: 0;
-                padding: 0;
-                flex-direction: column;
-                text-align: center;
-
-                div:nth-of-type(1) {
-                    width: 100%;
-                    text-align: left;
-                }
-
-                div:nth-of-type(2) {
-                    width: 100%;
-                    text-align: right;
-                    padding: 0 50px 20px 0;
-
-                    h1 {
-                        text-align: right;
-                    }
-
-                    div {
-                        text-align: right;
-                        justify-content: right;
-                        padding-bottom: 30px;
-                    }
-
-                    button {
-                        margin: 0 auto;
-                        width: 90%;
-                    }
-                }
+                font-size: 1.4rem;
             }
         }
     }

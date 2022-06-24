@@ -1,6 +1,8 @@
 import logo from "./../images/tasty-logo-04 1.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./../assets/css/Header.scss";
+
 
 const Header = () => {
   const [input, setInput] = useState();
@@ -16,7 +18,7 @@ const Header = () => {
         <img src={logo} alt={logo} />
       </Link>
 
-      <h1>Find a recipe,an idea,an inspiration...</h1>
+      <h1>Find a recipe, an idea, an inspiration...</h1>
       <form onClick={handleChange} action="">
         <input
           style={{ outlineColor: "#FF6E85" }}
