@@ -22,19 +22,6 @@ export const AuthContextProvider = (props) => {
   const randomId = random.idMeal;
   console.log(random);
 
-  // const [searchData, setSearchData] = useState([]);
-
-  // useEffect(() => {
-  //   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${category}`)
-  //     .then((response) => response.json())
-  //     .then((json) => {
-  //       setSearchData(json.meals);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }, []);
-  // console.log(searchData);
   return (
     <AuthContext.Provider
       value={{
@@ -42,7 +29,6 @@ export const AuthContextProvider = (props) => {
         setData: setData,
         random: random,
         randomId: randomId,
-        // searchData: searchData,
       }}
     >
       {props.children}

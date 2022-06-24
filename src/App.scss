@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700');
 
+
+// GENERAL.SCSS
 * {
     margin: 0;
     padding: 0;
@@ -109,13 +111,13 @@ span:hover {
     }
 }
 
+// CATEGORY.SCSS
 /*-------CATEGORY LIST--------*/
 
 .categoryListContainer {
     color: #FF6E86;
     font-weight: bold;
     padding: 0 16%;
-
 
     .categoryList {
         width: 100%;
@@ -135,9 +137,9 @@ span:hover {
 }
 
 /*------CATEGORY ITEM------*/
-
 .randomContainer {
     width: 276px;
+    height: 300px;
 }
 
 .categoryItemContainer,
@@ -145,10 +147,8 @@ span:hover {
     background-color: #FF6E86;
     border-radius: 10px;
     color: white;
-    height: 280px;
     text-align: center;
     transition: all 0.5s;
-
 
     h1 {
         padding: 3vh 0 1vh 0;
@@ -165,7 +165,7 @@ span:hover {
 
     h3 {
         padding-top: 40%;
-        font-size: 2rem;
+        font-size: 3.5rem;
     }
 
     &:hover {
@@ -177,13 +177,9 @@ span:hover {
 }
 
 // /-----MEALLIST & SEARCHLIST-----/
-
 .mealListContainer,
 .searchListContainer {
     width: 100%;
-    // display: grid;
-    // grid-template-columns: auto auto;
-    // justify-content: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -229,7 +225,6 @@ span:hover {
 
 .searchContainer,
 .mealContainer {
-    // padding: 0 10%;
 
     h1 {
         text-align: center;
@@ -237,7 +232,6 @@ span:hover {
         font-size: 2.1rem;
         margin-bottom: 80px;
     }
-
 }
 
 /*-------DETAILLIST ----*/
@@ -265,9 +259,19 @@ span:hover {
             font-size: 35px;
         }
 
+        .mealDescription {
+            font-family: 'Roboto';
+            margin: 0;
+            padding: 0;
+            text-align: left;
+
+
+            span {
+                margin-right: 4%;
+            }
+        }
+
         .descriptionContainer {
-            // display: grid;
-            // grid-template-columns: 60% 40%;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -296,12 +300,10 @@ span:hover {
                 .ingredientsDiv {
                     width: 100%;
                     margin: 0;
+                    font-size: 1.1rem;
+                    font-weight: 800;
                 }
             }
-
-
-
-
 
             .instructionsList {
                 text-align: left;

@@ -6,6 +6,7 @@ import AuthContext from "../context/AuthContext";
 const CategoryList = () => {
   const { data, randomId } = useContext(AuthContext);
 
+<<<<<<< HEAD
   //   const [data, setData] = useState([]);
   //   const [random, setRandom] = useState([]);
 
@@ -28,6 +29,9 @@ const CategoryList = () => {
   //   //   console.log(random);
 
   //   const randomId = random.idMeal;
+=======
+  console.log(randomId);
+>>>>>>> 590b23d10d5f0e0c78ec06b17f0589d95c32387c
 
   return (
     <section className="categoryListContainer">

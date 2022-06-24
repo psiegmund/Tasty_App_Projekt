@@ -5,7 +5,6 @@ const DetailList = () => {
   const [detail, setDetail] = useState([]);
   const [youTube, setYouTube] = useState(false);
   const { id } = useParams();
-  // console.log(id);
 
   useEffect(() => {
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
@@ -13,12 +12,9 @@ const DetailList = () => {
       .then((json) => setDetail(json.meals[0]));
   }, [id]);
 
-  // console.log(detail);
-
   const instructionsList = () => {
     const instArr = detail.strInstructions.split(".");
     instArr.pop();
-    // console.log(instArr);
 
     const instlist = instArr.map((elt, i) => (
       <li key={i} className="instructionsList">
@@ -45,8 +41,7 @@ const DetailList = () => {
         measures.push(measure);
       }
     }
-    // console.log(measures);
-    // console.log(ingredients);
+
     const measuresInstructions = measures.map((item, i) => (
       <h3 key={i}>
         {item} {ingredients[i]}
@@ -59,6 +54,10 @@ const DetailList = () => {
     <section className="detailListContainer">
       <div>
         <img src={detail.strMealThumb} alt="Alt" />
+        <div className="mealDescription">
+          <span> Category :{detail.strCategory}</span>
+          <span>Area :{detail.strArea}</span>
+        </div>
         <div className="descriptionContainer">
           <div>
             <h1>{detail.strMeal}</h1>
@@ -75,7 +74,6 @@ const DetailList = () => {
         </div>
         {youTube ? (
           <iframe
-            // style={{ display: youTube ? "block" : "none" }}
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

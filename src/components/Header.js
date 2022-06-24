@@ -1,6 +1,8 @@
 import logo from "./../images/tasty-logo-04 1.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "./../assets/css/Header.scss";
+
 
 const Header = () => {
   const [input, setInput] = useState();
